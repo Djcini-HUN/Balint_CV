@@ -1,0 +1,196 @@
+:root {
+    --brown: #3d210c;
+    --lightbrown: #4e2f1a;
+    --white: #ffffff;
+    --gray:#232227;
+}
+html{
+    overflow-x: hidden;
+}
+*{
+    font-family: 'Sitka';
+}
+.white {
+    color: var(--white) !important; 
+  }
+.black {
+    color: black !important; 
+  }
+body{
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100%;
+}
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    position: absolute;
+    top: 5vh;
+    left: 0vw;
+    padding-left: clamp(3rem,18vw,18vw);
+    background-color: var(--brown);
+    height: clamp(5rem,12vh,14vh);
+    width: 100vw;
+
+}
+.header>img{
+    width: clamp(6rem,6vw,6vw);
+    border-radius: 1rem;
+    border: 6px solid var(--brown);
+    position: relative;  
+}
+.name{
+    margin-left: clamp(2rem,13vw,13vw);
+    margin-block: 22rem;
+    font-size: clamp(1.3rem,4vw,4vw);
+    color: var(--white);
+    font-family: 'Sitka';
+    font-weight: 800;
+}
+
+
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 3fr 11fr;
+    grid-template-rows: auto;
+    margin-inline: clamp(1rem,10vw,10vw);
+    height: 100vh;
+}
+
+
+.left_White{
+    background-color: var(--white);
+}
+.left_Gray{
+    background-color: var(--gray);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 225px;
+    row-gap: 1rem;
+    padding-inline: clamp(0.3rem,0.3vw,0.3vw);
+}
+.contact{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    row-gap: clamp(0.3rem,0.3vw,0.3vw);
+    width: clamp(7rem,12vw,12vw);
+}
+.contact_items{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(0.5rem,0.5vw,0.5vw);
+}
+.icons{
+    background-color: var(--brown);
+    border-radius: 50%;
+    padding: clamp(0.3rem,0.5vw,0.5vw);
+    width: clamp(0.7rem,0.7vw,0.7vw);
+}
+.contact_text{
+    color: var(--white);
+    font-size: clamp(0.6rem,0.6vw,0.6vw);
+}
+
+.border{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: clamp(5.8rem,7.8vw,7.8vw);
+    padding-block: clamp(0.2rem,0.2vw,0.2vw);
+    padding-inline: clamp(1rem,3vw,3vw);
+    border: 3px solid var(--brown);
+    border-radius: 3rem;
+    font-size: clamp(1rem,1.1vw,1.1vw);
+    
+}
+.rhombus{
+    width: clamp(0.8rem,0.8vw,0.8vw);
+}
+.list{
+    display: flex;
+    flex-direction: column;
+    row-gap: clamp(0.7rem,0.7vw,0.7vw);
+    width: clamp(7rem,12vw,12vw);
+}
+.list_item{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    column-gap: clamp(0.5rem,0.5vw,0.5vw);
+}
+.right_White{
+    background-color: var(--white);
+    padding-left: clamp(2rem,2vw,2vw);
+    padding-top: 220px;  
+}
+.right_White> .border{
+    background-color: var(--brown);
+    margin-bottom: clamp(1rem,1vw,1vw);
+}
+.xp{
+    margin-bottom:clamp(3rem,3vw,3vw);
+}
+.xp,.study{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: clamp(1.2rem,1.2vw,1.2vw);
+    
+}
+.xp_item,.study_item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.xp_item>.contact_text,.study_item>.contact_text{
+    font-size: 1rem;
+    font-weight: 400;
+}
+.xp_item>.contact_text2,.study_item>.contact_text2{
+    font-size: 1rem;
+    font-weight: 800;
+}
+@media screen and (max-width: 1250px){
+    .grid{
+        grid-template-columns: 0.6fr 3fr 10fr;
+        margin-inline: 0;
+    }
+    .header{
+        padding-left: clamp(3rem,9vw,10vw);
+        top: 5vh;
+        height: clamp(6rem,6.5vh,6.5vh);
+    }
+    .header>img{
+        width: clamp(6rem,5vw,5vw);
+        border: 4px solid var(--brown);
+    }
+    .left_Gray,.right_White{
+        padding-top: 190px;
+    }
+}
+@media screen and (max-width: 890px){
+    .contact_items{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    }
+    .right_White{
+        padding-left: clamp(0.6rem,0.6vw,0.6vw);
+    }
+}
+@media screen and (max-width: 500px){
+    .grid{
+        grid-template-columns: 0fr 4fr 8fr;
+    }
+    .header{
+        padding-left: clamp(1rem,7vw,7vw);
+    }
+}
